@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Tilt Effect</title>
+</head>
+
+<body>
+  <section class="section-container">
+    <div class="container">
+      <h1 class="main-title">
+        <span class="title">Get social</span>
+      </h1>
+
+      <div class="box box-1">
+        <a href="https://instagram.com" target="_blank">
+          <i class="fab fa-instagram fa-5x icon"></i>
+        </a>
+      </div>
+
+      <div class="box box-2">
+        <a href="https://facebook.com" target="_blank">
+          <i class="fab fa-facebook fa-5x icon"></i>
+        </a>
+      </div>
+
+      <div class="box box-3">
+        <a href="https://snapchat.com" target="_blank">
+          <i class="fab fa-snapchat-ghost fa-5x icon"></i>
+        </a>
+      </div>
+
+      <div class="box box-4">
+        <a href="https://twitter.com" target="_blank">
+          <i class="fab fa-twitter fa-5x icon"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="tilt.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelector('.main-title'), {
+      max: 30,
+      speed: 600,
+      scale: 1,
+      transition: true,
+      easing: "cubic-bezier(.03, .98, .52, .99)",
+      perspective: 400
+    });
+
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+      max: 30,
+      speed: 600,
+      scale: 1,
+      transition: true,
+      easing: "cubic-bezier(.03, .98, .52, .99)",
+      perspective: 600,
+      glare: true
+    });
+  </script>
+</body>
+
+</html>
